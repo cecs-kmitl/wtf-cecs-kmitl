@@ -44,7 +44,11 @@ questions:
         text: "14"
     answer: b
     explanation: |
-      The place values in `1010` give `8 + 0 + 2 + 0`, which equals **10**.
+      The place values in `1010` give the following sum, which equals **10**:
+
+      \[
+      (1 \times 2^3) + (0 \times 2^2) + (1 \times 2^1) + (0 \times 2^0) = 10
+      \]
 
   - id: q2
     type: multiple_choice
@@ -150,7 +154,7 @@ Choice questions contain 2 to 10 options. True/false questions contain 1 to 10 s
 
 Quote text that looks like a number or boolean, or contains `:`, to keep it a string: for example, `text: "10"` and `text: "true"`. True/false answer keys must instead use unquoted boolean `true` and `false`.
 
-Use YAML `|` for multiline `prompt` and `explanation` values. These fields support basic Markdown, including **strong text**, *emphasis*, lists, and inline code. Other fields are plain text. HTML, MDX, images, and LaTeX rendering are not supported.
+Use YAML `|` for multiline `prompt` and `explanation` values. These fields support basic Markdown, including **strong text**, *emphasis*, lists, inline code, and LaTeX math. Use `$x^2$` for inline math and `$$x^2$$` on separate lines for display math. Other fields are plain text. HTML, MDX, and images are not supported. LaTeX math is rendered with KaTeX.
 
 Content fields support Unicode text in any language. Their IDs and schema keys remain ASCII. Write accepted answers in the forms you actually want to accept; the application does not translate responses or infer equivalent meanings.
 

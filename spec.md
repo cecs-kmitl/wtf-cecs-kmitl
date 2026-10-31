@@ -123,7 +123,7 @@ Allow paragraphs, emphasis, strong text, lists, blockquotes, inline code, and co
 
 Do not render raw HTML, scripts, iframes, images, MDX, event handlers, or file-provided styles. Render embedded headings as ordinary text to preserve the application's heading hierarchy. Links must be absolute `https:` or `http:` URLs validated with the URL parser. Reject other schemes and relative URLs. Open external links with `rel="noopener noreferrer"`. Do not automatically fetch resources referenced by exam content.
 
-The first release does not render images, audio, video, GFM tables, or LaTeX. Formulas and code may be represented as text or inline code.
+Render inline and display LaTeX math with remark-math and KaTeX in prompts and explanations. Keep wide display equations readable on narrow screens with horizontal overflow. The first release does not render images, audio, video, or GFM tables.
 
 ## 6. Answers and grading
 

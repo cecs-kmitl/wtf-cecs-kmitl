@@ -4,6 +4,8 @@ Live site: https://wtf-cecs-kmitl.pages.dev
 
 A static practice exam application. Import a Markdown file based on `template.md` to answer and review questions in the browser. Exam content may use any language; application text and documentation are English.
 
+Math in prompts and explanations supports LaTeX: use `$...$` inline or `$$...$$` on separate lines for display equations.
+
 ## Exam library
 
 Add Markdown exam files to `exams/` and push to the connected GitHub repository. Cloudflare Pages builds the library from those files. The build validates each file and fails if an exam is invalid or has a duplicate ID. Library files and their answer keys are public. See `exams/README.md`.

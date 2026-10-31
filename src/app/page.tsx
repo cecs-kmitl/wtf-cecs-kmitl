@@ -1,13 +1,15 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 import Matching from "./matching";
 import { Exam, Question, Response, Responses, grade, parseExam, validateExam } from "../lib/exam";
 
 type LibraryExam = {name: string; title: string; description: string; questions: number; source: string};
 type Session = { exam: Exam; responses: Responses; feedbackMode: "after" | "immediate"; checked: string[]; index: number; status: "ready" | "taking" | "submitted" };
 const KEY = "md-mocktest.session.v1";
-function Markdown({ children }: { children: string }) { return <div className="prose" dir="auto"><ReactMarkdown skipHtml disallowedElements={["img"]} unwrapDisallowed urlTransform={url => { try { return ["https:", "http:"].includes(new URL(url).protocol) ? url : ""; } catch { return ""; } }} components={{a: props => <a {...props} target="_blank" rel="noopener noreferrer" />, h1: ({children}) => <p>{children}</p>, h2: ({children}) => <p>{children}</p>, h3: ({children}) => <p>{children}</p>}}>{children}</ReactMarkdown></div>; }
+function Markdown({ children }: { children: string }) { return <div className="prose" dir="auto"><ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[[rehypeKatex, {throwOnError:false, strict:"ignore"}]]} skipHtml disallowedElements={["img"]} unwrapDisallowed urlTransform={url => { try { return ["https:", "http:"].includes(new URL(url).protocol) ? url : ""; } catch { return ""; } }} components={{a: props => <a {...props} target="_blank" rel="noopener noreferrer" />, h1: ({children}) => <p>{children}</p>, h2: ({children}) => <p>{children}</p>, h3: ({children}) => <p>{children}</p>}}>{children}</ReactMarkdown></div>; }
 function answerText(q: Question, value: Response | undefined): string {
  if (value === undefined) return "No answer";
  if (q.type === "single_choice") return q.options.find(x => x.id === value)?.text || "No answer";

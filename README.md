@@ -1,5 +1,7 @@
 # CECS Mock
 
+Live site: https://wtf-cecs-kmitl.pages.dev
+
 A static practice exam application. Import a Markdown file based on `template.md` to answer and review questions in the browser. Exam content may use any language; application text and documentation are English.
 
 ## Exam library

@@ -6,7 +6,7 @@ Status: Design requirements for approval, not a running or browser-tested interf
 
 Reading this as: a practice exam tool for students, using the visual language of printed question sheets and answer fields in black, white, and gray, with ENERGY 1 / RHYTHM 1 / MOTION 1.
 
-The owner's direction is minimal, functional, grayscale, with Light/Dark themes and small animations. Dial values are design requirements, not measured scores.
+The owner's direction is minimal and functional, with Light/Dark themes, green and red answer feedback, and small animations. Dial values are design requirements, not measured scores.
 
 The character is an organized study desk. Questions take priority. Repeated question numbers, answer fields, and the relationship between prompts and explanations establish identity without illustrations or marketing sections.
 
@@ -16,7 +16,7 @@ All project documentation and authored interface copy are English. Exam content 
 
 | Decision | Reason |
 | --- | --- |
-| Grayscale only | Matches the owner's palette and keeps attention on the question. |
+| Neutral surfaces with green and red feedback | Keeps attention on the question while making correct and incorrect answers easy to distinguish. |
 | Working Light/Dark themes | Lets students choose a suitable reading surface for their environment. |
 | One question at a time | Limits competing content while numbered navigation permits skipping. |
 | Prominent numbers and consistent alignment | Keeps prompts, instructions, and navigation predictable. |
@@ -32,7 +32,7 @@ Show `md-mocktest` as ordinary text. Do not create a logo or other visual asset 
 
 ## 3. Colors and theme tokens
 
-Use CSS custom properties referenced through Tailwind. Avoid scattered component color literals. Correct, incorrect, and unanswered states require words and structural cues, never red/green or grayscale differences alone.
+Use CSS custom properties referenced through Tailwind. Avoid scattered component color literals. Correct, incorrect, and unanswered states require words and structural cues in addition to color.
 
 | Token | Light | Dark | Use |
 | --- | --- | --- | --- |
@@ -160,6 +160,8 @@ Exercise Light/Dark themes with mouse and keyboard-only input, plus touch for ma
 | Multilingual content | Preserve original text through rendering, input, restore, and results; handle direction and long text without replacing English application labels. |
 
 ## 10. antislop Delivery Gate for documents
+
+This historical document review predates the owner's request to add green and red answer feedback.
 
 This review covers design documents and the template, not an implemented interface. PASS indicates verified document content or requirements. Runtime behavior remains N/A until implementation. Do not present this report as proof of a successful build, browser click-through, or accessibility conformance.
 

@@ -32,7 +32,7 @@ The repository's `template.md` uses English instructions and English sample ques
 | Take an exam | Show one question at a time; navigate backward and skip questions. |
 | Grade | Submit the whole attempt, then show scores, responses, correct answers, and explanations. |
 | Resume | Recover the latest local exam and responses after refreshing the same browser. |
-| Theme | Support working Light/Dark themes using only black, white, and gray. |
+| Theme | Support Light/Dark themes with green correct-answer and red incorrect-answer feedback. |
 | Example | Download `template.md` or open the same file as a sample exam. |
 
 The first release excludes accounts, instructor administration, a database, external file uploads, multi-exam history, randomization, timers, AI question generation, immediate answer reveals, essay grading, and arbitrary Markdown that does not follow the schema.
@@ -153,7 +153,7 @@ In after-submission mode, do not render correct answers or explanations before s
 - On narrow screens, show each source with a native target `<select>` and a textual pair summary instead of squeezing two columns.
 - Every method edits the same answer model. Resizing must preserve answers and scores.
 - A target can be used once. Assigning an occupied target moves it to the new source, clears the old pair, and announces the move in English while preserving the original item text.
-- Selecting an existing pair changes nothing. Provide per-source clear, whole-question clear, and Escape to cancel an unfinished selection or drag.
+- Selecting an existing pair again removes it. The mobile selection list can return to its empty option. Escape cancels an unfinished selection or drag.
 - Dropping outside a target or receiving `pointercancel` must preserve the answer. Clean up pointer capture.
 - Recalculate SVG geometry after wrapping, resizing, or scrolling. Provide textual pair summaries for screen readers.
 - Preserve file order; do not randomize. The sample's targets must not accidentally reveal all answers through matching row positions.

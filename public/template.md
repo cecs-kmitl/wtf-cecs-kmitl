@@ -46,9 +46,9 @@ questions:
     explanation: |
       The place values in `1010` give the following sum, which equals **10**:
 
-      \[
+      $$
       (1 \times 2^3) + (0 \times 2^2) + (1 \times 2^1) + (0 \times 2^0) = 10
-      \]
+      $$
 
   - id: q2
     type: multiple_choice

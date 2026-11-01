@@ -1,4 +1,4 @@
 :HL["/wtf-cecs-kmitl/_next/static/chunks/2b32kwxu054qb.css","style"]
 :HC["/",""]
 1:[["children",{"s":"__PAGE__","h":160}]]
-0:{"b":"XBvCwNf65duCK6Qwp0Ivg","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"fSdMh7zFuMNkWHhVcJqfC","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

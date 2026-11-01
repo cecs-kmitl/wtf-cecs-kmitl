@@ -8,7 +8,7 @@
   "exam": {
     "id": "dsa-final-codex-100-20261031",
     "title": "Data Structures and Algorithms — ม็อกข้อสอบคละบท 100 ข้อ",
-    "description": "Heap 5, Graphs 19, Algorithm Analysis 5, Searching 19, Sorting 19, Recursion และ Divide and Conquer 18, Greedy และ Dynamic Programming 15 ข้อ"
+    "description": "Heap 5, Graphs 20, Algorithm Analysis 5, Searching 20, Sorting 20, Recursion และ Divide and Conquer 15, Greedy และ Dynamic Programming 15 ข้อ"
   },
   "questions": [
     {
@@ -340,6 +340,33 @@
       "explanation": "AVL tree มีความสูง Θ(log n) จากเงื่อนไขสมดุล และต้นไม้ทวิภาคที่มี n โหนดมีความสูงอย่างน้อยระดับ log n"
     },
     {
+      "id": "graphs_20",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "การท่องไปในกราฟแบบ Breadth-First Search (BFS) ต้องอาศัยโครงสร้างข้อมูลใดเป็นหลักในการทำงาน?\n",
+      "instructions": "เลือกคำตอบที่ถูกต้องที่สุดเพียงข้อเดียว",
+      "options": [
+        {
+          "id": "a",
+          "text": "Stack"
+        },
+        {
+          "id": "b",
+          "text": "Queue"
+        },
+        {
+          "id": "c",
+          "text": "Binary Search Tree"
+        },
+        {
+          "id": "d",
+          "text": "Hash Table"
+        }
+      ],
+      "answer": "b",
+      "explanation": "**BFS** สำรวจโหนดตามระดับความลึกทีละชั้น จึงใช้ **Queue (FIFO)** ในการเก็บโหนดที่รอการสำรวจ\n"
+    },
+    {
       "id": "sorting_17",
       "type": "single_choice",
       "points": 1,
@@ -503,33 +530,6 @@
         "c"
       ],
       "explanation": "ทั้ง 3n²+2n และ n log n มีขอบเขตบน O(n²) ส่วน 2ⁿ และ n³ เติบโตเร็วกว่า n²"
-    },
-    {
-      "id": "recursion_18",
-      "type": "single_choice",
-      "points": 1,
-      "prompt": "ข้อใดเป็นตัวอย่าง divide and conquer",
-      "instructions": "เลือกคำตอบที่ถูกต้องที่สุดเพียงข้อเดียว",
-      "options": [
-        {
-          "id": "a",
-          "text": "ตรวจสมาชิกทุกตัวทีละตัวโดยไม่แบ่งปัญหา"
-        },
-        {
-          "id": "b",
-          "text": "เลือกเหรียญมูลค่าสูงสุดซ้ำโดยไม่แบ่งปัญหา"
-        },
-        {
-          "id": "c",
-          "text": "เก็บข้อมูลใน hash table"
-        },
-        {
-          "id": "d",
-          "text": "แบ่งอาร์เรย์สองครึ่ง เรียงแต่ละครึ่ง แล้วรวมผล"
-        }
-      ],
-      "answer": "d",
-      "explanation": "merge sort แบ่ง แก้ปัญหาย่อย และรวมผล"
     },
     {
       "id": "graphs_13",
@@ -1346,6 +1346,33 @@
       "explanation": "การเกิดสถานะซ้ำทำให้การเก็บผลมีประโยชน์"
     },
     {
+      "id": "searching_20",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "หากตาราง Hash ใช้การแก้ปัญหาการชนแบบ Quadratic Probing โดยมีฟังก์ชัน `h(k, i) = (h(k) + i^2) mod m` ถ้า `h(k) = 3` และ `m = 10` ลำดับการตรวจสอบช่องในตารางเมื่อเกิดการชน (`i = 0, 1, 2, 3`) คือข้อใด?\n",
+      "instructions": "เลือกคำตอบที่ถูกต้องที่สุดเพียงข้อเดียว",
+      "options": [
+        {
+          "id": "a",
+          "text": "3, 4, 5, 6"
+        },
+        {
+          "id": "b",
+          "text": "3, 4, 7, 2"
+        },
+        {
+          "id": "c",
+          "text": "3, 6, 9, 2"
+        },
+        {
+          "id": "d",
+          "text": "3, 5, 7, 9"
+        }
+      ],
+      "answer": "b",
+      "explanation": "เมื่อ `i = 0`: `3`, `i = 1`: `(3 + 1) mod 10 = 4`, `i = 2`: `(3 + 4) mod 10 = 7`, `i = 3`: `(3 + 9) mod 10 = 2` ได้ลำดับ **3, 4, 7, 2**\n"
+    },
+    {
       "id": "recursion_03",
       "type": "single_choice",
       "points": 1,
@@ -1456,33 +1483,6 @@
       ],
       "answer": "d",
       "explanation": "มีการลดขนาดทีละ 1 รวมประมาณ n ขั้น"
-    },
-    {
-      "id": "recursion_05",
-      "type": "single_choice",
-      "points": 1,
-      "prompt": "กำหนด f(0)=1 และ f(n)=f(n-1)+1 ค่า f(2) เท่าใด",
-      "instructions": "เลือกคำตอบที่ถูกต้องที่สุดเพียงข้อเดียว",
-      "options": [
-        {
-          "id": "a",
-          "text": "4"
-        },
-        {
-          "id": "b",
-          "text": "3"
-        },
-        {
-          "id": "c",
-          "text": "1"
-        },
-        {
-          "id": "d",
-          "text": "2"
-        }
-      ],
-      "answer": "b",
-      "explanation": "f(1)=2 และ f(2)=3"
     },
     {
       "id": "sorting_11",
@@ -2220,6 +2220,33 @@
       "explanation": "ต้องมีกฎหยุดและแต่ละขั้นต้องคืบหน้าไปถึงกฎนั้นได้"
     },
     {
+      "id": "sorting_20",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "สำหรับอาร์เรย์ `[8, 3, 5, 2]` เมื่อผ่านการทำงานของ Bubble Sort (เรียงจากน้อยไปมาก) รอบใหญ่ที่ 1 (Pass 1) เสร็จสิ้น ลำดับของอาร์เรย์จะเป็นอย่างไร?\n",
+      "instructions": "เลือกคำตอบที่ถูกต้องที่สุดเพียงข้อเดียว",
+      "options": [
+        {
+          "id": "a",
+          "text": "[2, 3, 5, 8]"
+        },
+        {
+          "id": "b",
+          "text": "[3, 5, 2, 8]"
+        },
+        {
+          "id": "c",
+          "text": "[2, 8, 3, 5]"
+        },
+        {
+          "id": "d",
+          "text": "[3, 8, 5, 2]"
+        }
+      ],
+      "answer": "b",
+      "explanation": "ในการเปรียบเทียบสลับคู่ติดกันของ Bubble Sort รอบที่ 1 เลข 8 ซึ่งมากที่สุดจะถูกดันไปอยู่ท้ายสุด ได้เป็น **`[3, 5, 2, 8]`**\n"
+    },
+    {
       "id": "analysis_02",
       "type": "single_choice",
       "points": 1,
@@ -2299,33 +2326,6 @@
       ],
       "answer": "c",
       "explanation": "ช่องที่เคยถูกใช้ต้องไม่ทำให้การค้นหาคีย์ซึ่งผ่านช่องนั้นหยุดก่อนเวลา"
-    },
-    {
-      "id": "recursion_10",
-      "type": "single_choice",
-      "points": 1,
-      "prompt": "หอคอยฮานอย 3 จาน ต้องย้ายอย่างน้อยกี่ครั้ง",
-      "instructions": "เลือกคำตอบที่ถูกต้องที่สุดเพียงข้อเดียว",
-      "options": [
-        {
-          "id": "a",
-          "text": "3"
-        },
-        {
-          "id": "b",
-          "text": "7"
-        },
-        {
-          "id": "c",
-          "text": "8"
-        },
-        {
-          "id": "d",
-          "text": "6"
-        }
-      ],
-      "answer": "b",
-      "explanation": "จำนวนครั้งน้อยสุดคือ 2³-1=7"
     },
     {
       "id": "searching_04",
